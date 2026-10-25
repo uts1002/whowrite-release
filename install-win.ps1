@@ -1,4 +1,4 @@
-﻿# 누가기록 Windows 설치 · 업데이트 (PowerShell 한 줄)
+# 누가기록 Windows 설치 · 업데이트 (PowerShell 한 줄)
 #
 #   irm https://raw.githubusercontent.com/uts1002/whowrite-release/main/install-win.ps1 | iex
 #
@@ -6,6 +6,7 @@
 # - PowerShell 로 받은 파일에는 "인터넷에서 받은 파일" 표시가 붙지 않아 SmartScreen 경고가 뜨지 않는다.
 # - 같은 명령을 다시 실행하면 최신 버전으로 업데이트된다. 사용자 데이터(~\.whowrite)는 건드리지 않는다.
 # - raw.githubusercontent.com 은 charset=utf-8 로 내려주므로 irm 이 한글을 바르게 읽는다.
+#   BOM 을 넣지 말 것 — irm 결과 맨 앞에 BOM 이 남아 첫 줄 주석이 명령으로 실행된다.
 #   (Release 자산 URL 은 octet-stream 이라 한글 안내문이 깨질 수 있어 쓰지 않는다)
 #
 # 환경 변수
